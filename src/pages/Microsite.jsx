@@ -88,14 +88,19 @@ const Microsite = () => {
 
 const handleFormSubmit = (data) => {
   try {
-    // Simulating save
-    localStorage.setItem("micrositeFormData", JSON.stringify(data));
-    toast.success("Microsite data saved successfully!");
+    const existingProjects = JSON.parse(localStorage.getItem("micrositeProjects")) || [];
+    const newProject = { ...data, id: Date.now() }; // give each project a unique ID
+
+    const updatedProjects = [...existingProjects, newProject];
+    localStorage.setItem("micrositeProjects", JSON.stringify(updatedProjects));
+
+    toast.success("Project added successfully! 🎉");
   } catch (error) {
-    console.error("Error saving data:", error);
-    toast.error("Failed to save microsite data");
+    console.error("Error saving project:", error);
+    toast.error("Failed to save project 😢");
   }
 };
+
 
   return (
     <section>
