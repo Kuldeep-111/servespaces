@@ -3,7 +3,7 @@ import React from 'react';
 
 const Header = ({ onLogout }) => {
   return (
-    <header className="flex justify-between items-center py-[25px] px-[50px] ml-[80px]">
+    <header className="flex justify-between max-w-[90%] items-center py-[25px] px-[50px] ml-[80px]">
       <div>
         <img src="/images/logo.webp" alt="logo" className="w-[100px] block" />
       </div>

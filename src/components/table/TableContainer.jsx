@@ -8,6 +8,7 @@ import TableRow from "./TableRow";
 import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import Pagination from "./Pagination";
+import { Link } from "react-router-dom";
 
 const TableContainer = ({ head, data }) => {
   return (
@@ -31,7 +32,7 @@ const TableContainer = ({ head, data }) => {
               ))}
               <TableData>
                 <div className="flex items-center justify-center gap-[10px] ">
-                <button className="text-primary text-[20px]"><MdEdit/></button>
+               <Link to="/project-details" > <button className="text-primary text-[20px]"><MdEdit/></button></Link>
                 <button className="text-secondary text-[20px]"><MdDelete/></button>
                 </div>
               </TableData>
