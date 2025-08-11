@@ -7,6 +7,7 @@ import Microsite from './pages/Microsite'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ProjectListDetails from './pages/ProjectListDetails'
+import Homepage from './pages/Homepage'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="project-list" element={<ProjectList />} />
           <Route path="project-details" element={<ProjectListDetails />} />
           <Route path="microsite" element={<Microsite />} />
+          <Route path="page/home" element={<Homepage />} />
         </Route>
 
       </Routes>

@@ -15,7 +15,7 @@ const projectList = [
   "third"
 ]
 const pages=[
-  {label:"Home Page",link:"/home",icon:IoMdHome},
+  {label:"Home Page",link:"/page/home",icon:IoMdHome},
   {label:"Blog Details Page",link:"/home",icon:IoMdHome},
   {label:"Media Centre Page",link:"/home",icon:IoMdHome},
   {label:"Home Page",link:"/home",icon:IoMdHome},
@@ -31,7 +31,7 @@ const Dashboard = () => {
           <div className="col-span-6"><ProjectCard/></div>
           <div className="col-span-6"><TestimonialCard data={testimonial}/></div>
         </div>
-        <SectionsCard title="Page" icon={RiPagesFill} data={pages}/>
+        <SectionsCard title="Pages" icon={RiPagesFill} data={pages}/>
         <SectionsCard title="Other Sections" icon={RiPagesFill} data={pages}/>
       </div>
       <div className="col-span-4">

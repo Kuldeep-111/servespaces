@@ -7,7 +7,7 @@ import CardHeading from '../card/CardHeading';
 import Card from '../card/Card';
 import TextDropdown from './TextDropdown';
 
-const DynamicForm = ({title,data,onSubmit }) => {
+const DynamicForm = ({title,data,onSubmit, className }) => {
   const [formData, setFormData] = useState({});
   const [resetCounter, setResetCounter] = useState(0);
 
@@ -30,6 +30,8 @@ const DynamicForm = ({title,data,onSubmit }) => {
       label: field.label || '',
       value: formData[field.name] || '',
       required: field.required,
+      col:field.col || '',
+      rows:field.rows
     };
 
     switch (field.type) {
@@ -77,7 +79,7 @@ const DynamicForm = ({title,data,onSubmit }) => {
   };
 
   return (
-    <Card>
+    <Card className={className}>
         <CardHeading>{title}</CardHeading>
       <form onSubmit={handleSubmit} >
         <div className='grid grid-cols-12 gap-x-[20px] gap-y-[30px]'>

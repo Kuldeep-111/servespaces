@@ -1,7 +1,7 @@
 import React from 'react';
 import Label from './Label';
 
-const TextArea = ({ label, name, value, onChange, required = false, rows = 10 }) => {
+const TextArea = ({ label, name, value, onChange, required = false, col="", rows = 10 }) => {
   return (
     <div className="">
       {label && (
